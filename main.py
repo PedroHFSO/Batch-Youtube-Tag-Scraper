@@ -36,6 +36,7 @@ if __name__ == '__main__':
     file_path = filedialog.askopenfilename(title="Select a file", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
     f = open(file_path)
     df_list = []
+    print('Gathering the tags. Please wait...')
     for yt_url in f:
         title, keywords = get_youtube_keywords(yt_url)
         df = pd.DataFrame({title: keywords})
@@ -48,6 +49,6 @@ if __name__ == '__main__':
         df_final = pd.concat([df, total_df.reset_index(drop = True)], axis = 1)
     else:
         df_final = df
-    print('Gathering the tags. Please wait...')
     df_final.to_csv("Final_output.csv", index = False)
+    input('Dataset created succesfully! Press anything to exit...')
     
