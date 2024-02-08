@@ -18,4 +18,6 @@ Use the following command in your terminal in the project's path:
 
 Executing the script, you will be prompted to answer whether you want the additional column containing the frequency of each term. This is recommended only if you are interested in directly visualizing the data yourself, rather than utilizing as another tool's input.
 
-The output CSV file will be created in the project's path with the name of "Final_output.csv".
+Regardless of your answer, you will next be prompted to choose the input text file containing the URLs of the videos you want to analyze. Keep in mind that the script will consider each separate row as a separate entry. For that reason, keep all URLs split by newline.
+
+The output CSV file will then be created in the project's path with the name of "Final_output.csv".
